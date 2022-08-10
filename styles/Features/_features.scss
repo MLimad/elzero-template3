@@ -1,0 +1,144 @@
+.features{
+    padding-top: $section-padding-top;
+    padding-bottom: $section-padding-bottom;
+    background-color: white;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        gap: 40px;
+        .box{
+            border: 1px solid #ccc;
+            text-align: center;
+
+            &:hover a{
+                background-position: left  bottom;
+                color: white;
+            }
+
+            &:hover .img-holder:after{
+                border-width: 170px 500px 170px 0px;
+            }
+           
+            .img-holder{
+
+                position: relative;
+                overflow: hidden;
+
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left:0;
+                    
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    border-style: solid;
+                    border-color: transparent transparent white transparent;
+                    border-width: 0 0 170px 500px;
+                    transition: $transition;
+                }
+
+                img{
+                    max-width: 100%;
+                }
+            }
+            h2{
+                font-size: 2.5rem;
+                margin: auto;
+                width: fit-content;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: -20px;
+                    left: 15px;
+                    width: calc(100% - 30px);
+                    height: 4px;
+                }
+
+            }
+            p{
+                line-height: 2;
+                font-size: 20px;
+                color: #999;
+                padding: 25px;
+                margin: 30px 0;
+
+            }
+
+            a{
+                display: block;
+                margin: 0 auto 30px;
+                width: fit-content;
+                font-weight: bold;
+                font-size: 22px;
+                padding: 10px 20px;
+                transition: $transition;
+                
+            }
+        }
+        .quality{
+            .img-holder::before{
+                background-color: rgba($color:  $quality-color, $alpha: 0.6);
+            }
+            h2::after{
+                background-color: $quality-color;
+            }
+            a{
+                color: $quality-color;
+                border: 3px solid $quality-color;
+                border-radius: 6px;
+                background: linear-gradient(to right,$quality-color 50%,white 50%);
+                background-size: 200% 100%;
+                background-position: right bottom;
+
+            }
+        }
+        .time{
+
+            .img-holder::before{
+                background-color: rgba($color:  $time-color, $alpha: 0.6);
+            }
+            h2::after{
+                background-color: $time-color;
+            }
+            a{
+                color: $time-color;
+                border: 3px solid $time-color;
+                border-radius: 6px;
+                background: linear-gradient(to right,$time-color 50%,white 50%);
+                background-size: 200% 100%;
+                background-position: right bottom;
+
+            }
+
+        }
+        .passion{
+
+            .img-holder::before{
+                background-color: rgba($color:  $passion-color, $alpha: 0.6);
+            }
+            h2::after{
+                background-color: $passion-color;
+            }
+            a{
+                color: $passion-color;
+                border: 3px solid $passion-color;
+                border-radius: 6px;
+                background: linear-gradient(to right,$passion-color 50%,white 50%);
+                background-size: 200% 100%;
+                background-position: right bottom;
+
+            }
+
+        }
+
+    }
+}

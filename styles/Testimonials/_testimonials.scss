@@ -1,0 +1,45 @@
+.testimonials{
+    background-color: $alt-color;
+    padding-top: $section-padding-top;
+    padding-bottom: $section-padding-bottom;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        gap: 40px;
+        .box{
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            position: relative;
+            padding: 20px;
+            border-radius: 6px;
+            img{
+                    position: absolute;
+                    top: -50px;
+                    right: -10px;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    border: 10px solid $alt-color;
+            }
+            h3{
+
+                margin: 0 0 10px 0;
+            }
+            .title{
+                color: #777;
+                margin-bottom: 12px;
+                display: block;
+            }
+            .rate{
+                .filled{
+                    color: $star-rate;
+                }
+            }
+            p{
+                line-height: 1.6;
+                color: #777;
+                margin-top: 10px;
+            }
+        }
+    }
+}

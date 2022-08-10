@@ -1,0 +1,47 @@
+.gallery{
+    padding-top: $section-padding-top;
+    padding-bottom: $section-padding-bottom;
+    position: relative;
+    background-color: $alt-color;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 40px;
+        .box{
+            box-shadow: $box-shadow;
+            padding: 15px;
+            background-color: white;
+            
+            .image{
+                position: relative;
+                overflow: hidden;
+                
+                &:hover::before{
+                    animation: flashing 0.5s;
+                }
+                &:hover img{
+                    transform: rotate(5deg) scale(1.1);
+                }
+
+                img{
+                    width: 100%;
+                    max-width: 100%;
+                    transition: $transition;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    background-color: rgba(255, 255, 255, .2);
+                    width: 0;
+                    height: 0;
+                    opacity: 0;
+                    transition: $transition;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}

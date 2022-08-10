@@ -1,0 +1,64 @@
+@import "./colors/colors";
+@import "./variables/variables";
+@import "./Main-title/main-title";
+
+
+// Container 
+@import "./container";
+
+// Navbar on Header
+@import "./Header/Nav/nav";
+
+
+// Mega Menu 
+@import "./Header/Nav/mega_menu";
+
+// Landing 
+@import "./Header/Landing/landing";
+
+// Articles 
+@import "./Articles/articles";
+
+// Gallery 
+@import "./Gallery/gallery";
+
+// Features 
+@import "./Features/features";
+
+// Testimonials 
+@import "./Testimonials/testimonials";
+
+// TeamMember 
+@import "./TeamMember/teamMember";
+
+// Services 
+@import "./Services/services";
+
+*{
+
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Cairo', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+}
+p{
+    margin: 0;
+  
+}
+
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

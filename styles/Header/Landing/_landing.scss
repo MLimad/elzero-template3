@@ -1,0 +1,80 @@
+@import "../../keyframes";
+
+.landing{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-color: $alt-color;
+        transform: skewY(-6deg);
+        transform-origin: top left;
+    }
+    .container{
+        min-height: calc(100vh - 72px); 
+        display: flex;
+        align-items: center;
+        padding-bottom: 80px;
+        .text{
+            flex: 1;
+            h1{
+                font-size: 3rem;
+                margin: 0;
+                color: black;
+                @media (max-width:991px) {
+                    font-size: 2rem;
+                }
+            }
+            p{
+                font-size: 22px;
+                font-weight: 500;
+                text-transform: capitalize;
+                color: $p-color;
+                margin-top: 10px;
+                line-height: 1.6;
+                max-width: 500px;
+                @media (max-width:991px) {
+                    font-size: 20px;
+                }
+            }
+
+            @media (max-width:991px) {
+                text-align: center;
+            }
+        }
+        .image{
+            flex: 1;
+            img{
+                position: relative;
+                width: 600px;
+                animation: up_down 5s infinite linear;
+            }
+            @media (max-width:991px) {
+                display: none;
+            }
+        }
+    }
+
+    .go-down{
+
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: $transition;
+        animation: bouncing 1.5s infinite;
+        &:hover {
+                color: $alt-color;
+        }
+        i{
+            font-size: 40px;
+            color:$main-color;
+            font-weight: 800;
+        }
+    }
+    
+}

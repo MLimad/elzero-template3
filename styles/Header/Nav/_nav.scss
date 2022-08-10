@@ -1,0 +1,77 @@
+nav{
+    
+    background-color: white;
+    box-shadow: $box-shadow;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        .logo{
+            height: 72px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width:767px) {
+                width: 100%;
+                height: 50px;
+            }
+            a{
+                font-size: 1.7rem;
+                font-weight: bold;
+                color: $main-color;
+            }
+        }
+        .main-nav{
+            display: flex;
+            @media (max-width:767px) {
+                margin: auto;
+             }
+             &>li:hover .mega-menu{
+                opacity: 1;
+                z-index: 100;
+                top: calc(100% + 1px);
+             }
+            &>li>a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: black;
+                padding: 0 30px;
+                text-transform: capitalize;
+                height: 72px;
+                position: relative;
+                font-weight: 500;
+                transition: $transition;
+                font-size: 1.1rem;
+                overflow: hidden;
+                @media (max-width:767px) {
+                   font-size: 14px;
+                   height: 40px;
+                   padding: 0 10px;
+                   margin: auto;
+                }
+            }
+            &>li>a::before{
+                position: absolute;
+                content: "";
+                width: 100%;
+                top: 0;
+                left: -100%;
+                height: 4px;
+                background-color: $main-color;
+                transition: $transition;
+
+            }
+            &>li>a:hover{
+                background-color: $hover-button;
+                color: $main-color;
+            }
+            &>li>a:hover::before{
+                left: 0;
+            }
+            
+        }
+    }
+}
