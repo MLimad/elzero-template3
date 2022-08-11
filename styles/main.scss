@@ -2,6 +2,36 @@
 @import "./variables/variables";
 @import "./Main-title/main-title";
 
+*{
+
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Cairo', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+}
+p{
+    margin: 0;
+  
+}
+
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
 
 // Container 
 @import "./container";
@@ -34,31 +64,6 @@
 // Services 
 @import "./Services/services";
 
-*{
+// Skills 
+@import "./Skills/skills";
 
-    box-sizing: border-box;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    font-family: 'Cairo', sans-serif;
-}
-
-
-a{
-    text-decoration: none;
-}
-p{
-    margin: 0;
-  
-}
-
-
-ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}

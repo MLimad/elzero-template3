@@ -53,6 +53,32 @@
   border-radius: 50%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -876,28 +902,47 @@ nav .container .main-nav > li > a:hover::before {
   color: #2196F3;
 }
 
-* {
-  box-sizing: border-box;
+.our-skills {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: white;
 }
-
-html {
-  scroll-behavior: smooth;
+.our-skills .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
-
-body {
-  font-family: "Cairo", sans-serif;
+@media (max-width: 991px) {
+  .our-skills .container img {
+    display: none;
+  }
 }
-
-a {
-  text-decoration: none;
+.our-skills .container .skills {
+  flex: 1;
 }
-
-p {
-  margin: 0;
+.our-skills .container .skills .skill h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.our-skills .container .skills .skill h3 span {
+  color: #2196F3;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  padding: 3px 5px;
+  border-radius: 3px;
+}
+.our-skills .container .skills .skill .progress {
+  background-color: #eeeeee;
+  width: 100%;
+  height: 30px;
+  position: relative;
+}
+.our-skills .container .skills .skill .progress span {
+  background-color: #2196F3;
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }/*# sourceMappingURL=main.css.map */
