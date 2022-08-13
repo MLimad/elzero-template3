@@ -1334,7 +1334,7 @@ nav .container .main-nav > li > a:hover::before {
 }
 .stats::before {
   content: "";
-  background-color: rgba(236, 236, 236, 0.9294117647);
+  background-color: rgba(255, 255, 255, 0.96);
   position: absolute;
   top: 0;
   left: 0;
@@ -1359,7 +1359,8 @@ nav .container .main-nav > li > a:hover::before {
           user-select: none;
   position: relative;
   color: #2b2b2b;
-  transition: 0.7s;
+  transition: 0.7s ease-in-out;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
 }
 .stats .container .box:hover {
   color: black;
@@ -1384,10 +1385,11 @@ nav .container .main-nav > li > a:hover::before {
   right: 0;
 }
 .stats .container .box i {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin-top: 10px;
 }
 .stats .container .box .number {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin: 10px;
 }

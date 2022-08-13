@@ -7,7 +7,7 @@
     
     &::before{
         content: "";
-        background-color: #ecececed;
+        background-color: rgba(255, 255, 255, 0.96);
         position: absolute;
         top: 0;
         left: 0;
@@ -29,7 +29,8 @@
             user-select: none;
             position: relative;
             color: #2b2b2b;
-            transition: 0.7s;
+            transition: 0.7s ease-in-out ;
+            box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
 
             &:hover{
                 color: black;
@@ -56,10 +57,11 @@
             }
 
             i{
-                font-size: 3rem;
+                font-size: 2.5rem;
+                margin-top: 10px;
             }
             .number{
-                font-size: 4rem;
+                font-size: 3.5rem;
                 font-weight: bold;
                 margin: 10px;
             }
