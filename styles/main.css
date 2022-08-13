@@ -1323,4 +1323,77 @@ nav .container .main-nav > li > a:hover::before {
   background-color: white;
   padding: 20px;
   margin-top: 10px;
+}
+
+.stats {
+  background-image: url("../../images/stats.jpg");
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+.stats::before {
+  content: "";
+  background-color: rgba(236, 236, 236, 0.9294117647);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.stats .container .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 15px 30px;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  color: #2b2b2b;
+  transition: 0.7s;
+}
+.stats .container .box:hover {
+  color: black;
+}
+.stats .container .box:hover::before, .stats .container .box:hover::after {
+  height: 100%;
+}
+.stats .container .box::before, .stats .container .box::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: #2196F3;
+  transition: 0.7s;
+}
+.stats .container .box::before {
+  top: 0;
+  left: 0;
+}
+.stats .container .box::after {
+  bottom: 0;
+  right: 0;
+}
+.stats .container .box i {
+  font-size: 3rem;
+}
+.stats .container .box .number {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 10px;
+}
+.stats .container .box .text {
+  color: #2196F3;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 10px;
 }/*# sourceMappingURL=main.css.map */
