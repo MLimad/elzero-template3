@@ -1139,4 +1139,123 @@ nav .container .main-nav > li > a:hover::before {
 }
 .latest-events .container .subscribe form input[type=submit]:hover {
   background-color: #5d5d5d;
+}
+
+.pricing {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #ececec;
+}
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.pricing .container .box {
+  background-color: white;
+  box-shadow: 0 0 10px #ddd;
+  position: relative;
+  transition: 0.3s;
+  z-index: 1;
+}
+.pricing .container .box:hover .label::before {
+  border-color: transparent transparent #f6f6f6;
+  transition-delay: 0.2s;
+}
+.pricing .container .box:hover::before, .pricing .container .box:hover::after {
+  width: 100%;
+}
+.pricing .container .box::before, .pricing .container .box::after {
+  content: "";
+  background-color: #f6f6f6;
+  position: absolute;
+  width: 0;
+  height: 50%;
+  transition: 0.3s;
+  z-index: -1;
+}
+.pricing .container .box::before {
+  left: 0;
+  top: 0;
+}
+.pricing .container .box::after {
+  right: 0;
+  bottom: 0;
+}
+.pricing .container .box h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 30px auto;
+}
+.pricing .container .box img {
+  width: 80px;
+  margin: auto;
+  display: block;
+}
+.pricing .container .box .price {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.pricing .container .box .price .amount {
+  font-size: 4rem;
+  color: #2196F3;
+  font-weight: bold;
+}
+.pricing .container .box .price .time {
+  color: #777;
+  font-size: 18px;
+}
+.pricing .container .box ul li {
+  padding: 20px 0 20px 20px;
+  border-top: 1px solid #eee;
+}
+.pricing .container .box ul i {
+  color: #2196F3;
+  margin-right: 10px;
+}
+.pricing .container .box a {
+  display: block;
+  margin: 30px auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid #2196F3;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #2196F3;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.pricing .container .box a:hover {
+  background-color: #2196F3;
+  color: white;
+}
+.pricing .container .adevanced .label {
+  background-color: #2196F3;
+  color: white;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  font-weight: bold;
+  position: absolute;
+  right: 25px;
+  padding: 10px 10px 30px 10px;
+  width: 40px;
+}
+.pricing .container .adevanced .label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-style: solid;
+  border-width: 20px;
+  border-color: transparent transparent white;
+}
+@media (min-width: 1200px) {
+  .pricing .container .adevanced {
+    transform: translateY(-20px);
+  }
 }/*# sourceMappingURL=main.css.map */
