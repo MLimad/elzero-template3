@@ -13,8 +13,15 @@
     <link rel="stylesheet" href="./styles/main.css">
     <title>Template 3</title>
 </head>
-<body>
-    <!-- Start Header -->
+<body onload="loading()">
+    <!-- Start Loader -->
+    <div id="loader">
+        <div class="lds-heart"><div></div></div>
+    </div>
+    <!-- End Loader -->
+   <!-- Start Website -->
+   <div id="website" style="display:none">
+         <!-- Start Header -->
     <header id="header">
         <!-- Start Nav -->
         <nav>
@@ -819,9 +826,12 @@
     </p>
    <!-- End Footer -->
    
+   </div>
+   <!-- End Website -->
 
 
    <!-- Javascript Scripts -->
+   <script src="./js/loader.js"></script>
    <script src="./js/main.js"></script>
 </body>
 </html>
